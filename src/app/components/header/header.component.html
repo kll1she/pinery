@@ -1,0 +1,20 @@
+<header>
+    <div class="container">
+        <div class="wrapper">
+            <a href="/pinery/home"><img src="assets/img/pinery.svg" alt="Pinery logo" class="logo"></a>
+            <nav class="menu" [ngClass]="{active: visibility}" (click)="toggle()">
+                <a href="/pinery/home" class="menu-item">Главная</a>
+                <a href="/pinery/attractions" class="menu-item">Достопримечательности</a>
+                <a href="/pinery/hotels" class="menu-item">Отели</a>
+                <a href="/pinery/about" class="menu-item">О проекте</a>
+                <a href="/pinery/contacts" class="menu-item">Контакты</a>
+            </nav>
+            <div class="background" [ngClass]="{active: visibility}"></div>
+            <div class="hamburger" [ngClass]="{active: visibility}" (click)="toggle()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,30 @@
+<div class="container">
+    <form class="add-block fx" id="form" (submit)="addRow()" name="myForm" *ngIf="admin">
+        <div class="input-container fx fd-col">
+            <label for="place">Место</label>
+            <input type="text" id="place" name="place" class="input" required [(ngModel)] = "tableForm.place">
+        </div>
+        <div class="input-container fx fd-col">
+            <label for="type">Вид отдыха</label>
+            <input type="text" id="type" name="type" class="input" required [(ngModel)] = "tableForm.type">
+        </div>
+        <div class="input-container fx fd-col">
+            <label for="date">Дата</label>
+            <input type="text" id="date" name="date" class="input" required [(ngModel)] = "tableForm.date">
+        </div>
+        <div class="input-container fx fd-col">
+            <label for="price">Цена за человека</label>
+            <input type="number" id="price" name="price" class="input" min="599" required [(ngModel)] = "tableForm.price">
+        </div>
+        <div class="input-container fx fd-col">
+            <label for="sponsor">Организатор</label>
+            <input type="text" id="sponsor" name="sponsor" class="input" required [(ngModel)] = "tableForm.sponsor">
+        </div>
+        <div class="input-container fx fd-col">
+            <label for="href">Ссылка</label>
+            <input type="text" id="href" name="href" class="input" required [(ngModel)] = "tableForm.href">
+        </div>
+        <button class="fx btn" type="submit">Добавить</button>
+    </form>
+    <p (click)="enterByAdmin()" *ngIf="!admin" class="admin">Войти как Администратор</p>
+</div>
