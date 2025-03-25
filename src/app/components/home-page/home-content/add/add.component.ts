@@ -42,15 +42,4 @@ export class AddComponent {
       href: '',
     }
   }
-
-  admin: boolean = false
-
-  enterByAdmin() {
-    let password = prompt('Введите пароль')
-    if(password = 'admin'){
-      this.admin = true
-    } else {
-      this.admin = false
-    }
-  }
 }
