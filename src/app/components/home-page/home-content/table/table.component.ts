@@ -23,12 +23,11 @@ import { Component } from '@angular/core';
                       <td class="table-item">{{table.date}}</td>
                       <td class="table-item">{{table.price}} рублей</td>
                       <td class="table-item"><a [href]="table.href" class="link" target="_blank">{{table.sponsor}}</a></td>
-                      <td *ngIf="admin"><button class="table-button"><img src="assets/img/trash.svg" alt="delete row" (click)="deleteRow(i)"></button></td>
+                      <td><button class="table-button"><img src="assets/img/trash.svg" alt="delete row" (click)="deleteRow(i)"></button></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <p class="admin" (click)="enterByAdmin()" *ngIf="!admin">Войти как Администратор</p>
             </div>`,
   styleUrls: ['./table.component.scss']
 })
@@ -36,16 +35,5 @@ export class TableComponent {
   tables: TableModel[] = tables;
   deleteRow(i: number) {
     tables.splice(i,1)
-  }
-
-  admin: boolean = false
-
-  enterByAdmin() {
-    let password = prompt('Введите пароль')
-    if(password = 'admin'){
-      this.admin = true
-    } else {
-      this.admin = false
-    }
   }
 }
