@@ -1,5 +1,5 @@
 <div class="container">
-    <form class="add-block fx" id="form" (submit)="addRow()" name="myForm" *ngIf="admin">
+    <form class="add-block fx" id="form" (submit)="addRow()" name="myForm">
         <div class="input-container fx fd-col">
             <label for="place">Место</label>
             <input type="text" id="place" name="place" class="input" required [(ngModel)] = "tableForm.place">
@@ -26,5 +26,4 @@
         </div>
         <button class="fx btn" type="submit">Добавить</button>
     </form>
-    <p (click)="enterByAdmin()" *ngIf="!admin" class="admin">Войти как Администратор</p>
 </div>
